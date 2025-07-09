@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yashaswi Farsan and Sweets</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #fffefc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #d32f2f;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a, .lang-toggle {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 20px;
+      background: #fff3e0;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      color: #d32f2f;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-img {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .hero-img img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #d32f2f;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-card h3 {
+      padding: 15px;
+      font-size: 1.2rem;
+    }
+
+    .testimonials {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .testimonial {
+      flex: 0 0 300px;
+      background: #ffebee;
+      border-radius: 10px;
+      padding: 20px;
+      font-style: italic;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .about-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      align-items: start;
+      padding: 20px;
+    }
+
+    .about {
+      flex: 1;
+      min-width: 280px;
+      background: #fbe9e7;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .contact {
+      flex: 1;
+      min-width: 280px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-info {
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-info p span {
+      font-weight: bold;
+      color: #d32f2f;
+    }
+
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .about-contact {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="title">Yashaswi Farsan & Sweets</h1>
+    <nav>
+      <a href="#menu" id="nav-menu">Menu</a>
+      <a href="#testimonials" id="nav-reviews">Reviews</a>
+      <a href="#contact" id="nav-contact">Contact</a>
+      <span class="lang-toggle" onclick="toggleLang()">मराठी</span>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2 id="hero-head">Crafted with Care, Served with Love</h2>
+      <p id="hero-para">Authentic taste, unmatched quality. Discover the joy of traditional Maharashtrian Farsan & Sweets with Yashaswi.</p>
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+    <h2 id="menu-title">Our Favorites</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="far.webp" alt="Farsan">
+        <h3>Spicy Mix Farsan</h3>
+      </div>
+      <div class="menu-card">
+        <img src="k.webp" alt="Kaju Katli">
+        <h3>Kaju Katli</h3>
+      </div>
+      <div class="menu-card">
+        <img src="moti.jpg" alt="Ladoo">
+        <h3>Motichoor Ladoo</h3>
+      </div>
+      <div class="menu-card">
+        <img src="poha.jpg" alt="Chiwda">
+        <h3>Crunchy Chiwda</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h2 id="testi-title">Our Customers Love Us</h2>
+    <div class="testimonials">
+      <div class="testimonial" id="t1">"Amazing taste and consistent quality. Yashaswi is our go-to for sweets." <br>— Sunita J.</div>
+      <div class="testimonial" id="t2">"Perfect farsan for every festive mood!" <br>— Rajesh M.</div>
+      <div class="testimonial" id="t3">"I ordered bulk for a wedding—everyone was impressed!" <br>— Neha P.</div>
+    </div>
+  </section>
+
+  <section class="about-contact section" id="contact">
+    <div class="about">
+      <h2 id="about-title">About Us</h2>
+      <p id="about-text">Yashaswi Farsan and Sweets has been delivering happiness for over 25 years. With a commitment to purity, taste, and tradition, we offer a variety of authentic snacks and sweets made with love and premium ingredients.</p>
+      <h5 id="hero-head">5000+ Happy Customers</h5>
+    </div>
+    <div class="contact">
+      <h2 id="contact-title">Contact Us</h2>
+      <div class="contact-info">
+        <p><span>📍</span> <span id="addr">Sopara Nirmal road, Nalasopara West, Maharashtra 401203</span></p>
+        <p><span>📞</span> +91 9762417464 <br>+91 9702717626</p>
+        <p><span>✉️</span> yfs2023@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Yashaswi Farsan and Sweets. All Rights Reserved.
+  </footer>
+
+  <script>
+    let currentLang = 'en';
+    function toggleLang() {
+      const marathi = {
+        title: "यशस्वी फरसाण आणि मिठाई",
+        navMenu: "मेनू",
+        navReviews: "पुनरावलोकने",
+        navContact: "संपर्क",
+        heroHead: "५०००+ समाधानी ग्राहक",
+        heroPara: "प्रामाणिक चव, सर्वोत्तम गुणवत्ता. पारंपरिक महाराष्ट्रीयन फरसाण आणि मिठाई यशस्वी सोबत अनुभवा.",
+        menuTitle: "आमचे खास पदार्थ",
+        testiTitle: "आमच्या ग्राहकांचे प्रेम",
+        t1: "\"अतिशय चविष्ट आणि दर्जेदार मिठाई. आमचा पहिला पर्याय!\" <br>— सुनिता जे.",
+        t2: "\"प्रत्येक सणासाठी उत्तम फरसाण!\" <br>— राजेश एम.",
+        t3: "\"लग्नात घ्यायची मोठी ऑर्डर दिली होती—सगळे खुश झाले!\" <br>— नेहा पी.",
+        aboutTitle: "आमच्याबद्दल",
+        aboutText: "यशस्वी फरसाण आणि मिठाई गेल्या २५ वर्षांपासून आनंद देत आहे. पारंपरिक पाककृती, दर्जेदार साहित्य आणि प्रेम यामुळे आमचे पदार्थ खास आहेत.",
+        contactTitle: "संपर्क करा",
+        addr: "१२३ गणेश रोड, पुणे, महाराष्ट्र"
+      };
+
+      const en = {
+        title: "Yashaswi Farsan & Sweets",
+        navMenu: "Menu",
+        navReviews: "Reviews",
+        navContact: "Contact",
+        heroHead: "5000+ Happy Customers",
+        heroPara: "Authentic taste, unmatched quality. Discover the joy of traditional Maharashtrian Farsan & Sweets with Yashaswi.",
+        menuTitle: "Our Favorites",
+        testiTitle: "Our Customers Love Us",
+        t1: "\"Amazing taste and consistent quality. Yashaswi is our go-to for sweets.\" <br>— Sunita J.",
+        t2: "\"Perfect farsan for every festive mood!\" <br>— Rajesh M.",
+        t3: "\"I ordered bulk for a wedding—everyone was impressed!\" <br>— Neha P.",
+        aboutTitle: "About Us",
+        aboutText: "Yashaswi Farsan and Sweets has been delivering happiness for over 25 years. With a commitment to purity, taste, and tradition, we offer a variety of authentic snacks and sweets made with love and premium ingredients.",
+        contactTitle: "Contact Us",
+        addr: "123 Ganesh Road, Pune, Maharashtra"
+      };
+
+      const lang = currentLang === 'en' ? marathi : en;
+
+      document.getElementById('title').innerText = lang.title;
+      document.getElementById('nav-menu').innerText = lang.navMenu;
+      document.getElementById('nav-reviews').innerText = lang.navReviews;
+      document.getElementById('nav-contact').innerText = lang.navContact;
+      document.getElementById('hero-head').innerText = lang.heroHead;
+      document.getElementById('hero-para').innerText = lang.heroPara;
+      document.getElementById('menu-title').innerText = lang.menuTitle;
+      document.getElementById('testi-title').innerText = lang.testiTitle;
+      document.getElementById('t1').innerHTML = lang.t1;
+      document.getElementById('t2').innerHTML = lang.t2;
+      document.getElementById('t3').innerHTML = lang.t3;
+      document.getElementById('about-title').innerText = lang.aboutTitle;
+      document.getElementById('about-text').innerText = lang.aboutText;
+      document.getElementById('contact-title').innerText = lang.contactTitle;
+      document.getElementById('addr').innerText = lang.addr;
+
+      currentLang = currentLang === 'en' ? 'mr' : 'en';
+      document.querySelector('.lang-toggle').innerText = currentLang === 'en' ? 'मराठी' : 'English';
+    }
+  </script>
+
+</body>
+</html>
